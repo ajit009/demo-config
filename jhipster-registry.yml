@@ -1,0 +1,22 @@
+version: '2'
+services:
+    jhipster-registry:
+        image: quay.io/ajit009local/jhipster-registry:v3.1.0
+        volumes:
+            - centralserverconfig:/centralconfig
+        # By default the JHipster Registry runs with the "prod" and "native"
+        # Spring profiles.
+        # "native" profile means the filesystem is used to store data, see
+        # http://cloud.spring.io/spring-cloud-config/spring-cloud-config.html
+        environment:
+            - SPRING_PROFILES_ACTIVE=dev,native
+            - SECURITY_USER_PASSWORD=admin
+            - JHIPSTER_REGISTRY_PASSWORD=admin
+            - JHIPSTER_LOGGING_LOGSTASH_ENABLED=true
+            - JHIPSTER_LOGGING_LOGSTASH_HOST=internal-poc-monitoring-alb-01-914846118.ap-southeast-2.elb.amazonaws.com
+            - JHIPSTER_METRICS_LOGS_ENABLED=true
+            - JHIPSTER_METRICS_LOGS_REPORTFREQUENCY=60
+            # - GIT_URI=https://github.com/jhipster/jhipster-registry/
+            # - GIT_SEARCH_PATHS=centralconfig
+        ports:
+            - 8761:8761

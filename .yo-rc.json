@@ -1,0 +1,14 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "employeeOps",
+      "portalEmp",
+      "taskOps"
+    ],
+    "directoryPath": "../",
+    "monitoring": "elk",
+    "serviceDiscoveryType": "eureka",
+    "adminPassword": "admin",
+    "jwtSecretKey": "26d5ab7ca0603023f487bf92427c9c45a0b3b3c5"
+  }
+}
