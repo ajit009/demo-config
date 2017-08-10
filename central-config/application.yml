@@ -11,17 +11,17 @@ jhipster:
     logging:
         logstash: # forward logs to ELK
             enabled: true
-            host: jhipster-logstash
+            host: internal-poc-monitoring-alb-01-914846118.ap-southeast-2.elb.amazonaws.com
     metrics:
         logs: # report metrics in the logs
             enabled: true
             report-frequency: 60 # in seconds
 spring:
     zipkin:
-        base-url: http://jhipster-zipkin:9411
+        base-url: http://internal-poc-monitoring-alb-01-914846118.ap-southeast-2.elb.amazonaws.com:9411
         enabled: true
 
 eureka:
     client:
         service-url:
-            defaultZone: http://admin:${jhipster.registry.password}@jhipster-registry:8761/eureka/
+            defaultZone: http://admin:admin@internal-poc-eureka-alb-1634500355.ap-southeast-2.elb.amazonaws.com:8761/eureka/
