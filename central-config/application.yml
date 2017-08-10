@@ -1,7 +1,7 @@
 #common configuration shared between all applications
 configserver:
-    name: Docker JHipster Registry
-    status: Connected to the JHipster Registry running in Docker
+    name: MSEU Service Discovery Register
+    status: Welcome! You are connected to MSEU registry now.
 
 jhipster:
     security:
