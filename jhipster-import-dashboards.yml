@@ -3,4 +3,4 @@ services:
     jhipster-import-dashboards:
         build: jhipster-import-dashboards/
         environment:
-            - ELASTICSEARCH_URL=http://$ELASTICSEARCH_HOST:$ELASTICSEARCH_PORT
+            - ELASTICSEARCH_URL=http://internal-elasticseach-1842825611.ap-southeast-2.elb.amazonaws.com:9200
