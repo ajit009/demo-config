@@ -1,7 +1,7 @@
 #common configuration shared between all applications
 configserver:
-    name: MSEU Service Discovery Register
-    status: Welcome! You are connected to MSEU registry now.
+    name: MSEU Service Discovery Registry
+    status: Connected to MSEU registry.
 
 jhipster:
     security:
